@@ -1,0 +1,38 @@
+/* ACOMPANHAMENTO */
+#pagAC .title h2, 
+#pagAC .content h2, 
+#pagAC h3,
+#pagAC .highlight-AC {
+    color: var(--gitbookGoldYellow);
+}
+
+.ac:hover {
+    border: 1px solid var(--gitbookGoldYellow);
+    outline: 3px solid rgba(250, 212, 0, 0.5)
+}
+
+/* ABORDAGEM */
+#pagAB .title h2, 
+#pagAB .content h2, 
+#pagAB h3,
+#pagAB .highlight-AB {
+    color: var(--gitbookBlue);
+}
+
+.ab:hover {
+    border: 1px solid #008afc;
+    outline: 3px solid rgba(0, 137, 250, 0.5);
+}
+
+/* COMUNICAÇÃO OPERACIONAL */
+#pagCO .title h2, 
+#pagCO .content h2, 
+#pagCO h3,
+#pagCO .highlight-CO {
+    color: var(--gitbookGreen);
+}
+
+.co:hover {
+    border: 1px solid #07cf00;
+    outline: 3px solid rgba(0, 250, 83, 0.5);
+}

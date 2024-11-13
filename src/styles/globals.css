@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+:root {
+    /* texts */
+    --textColorWhite: #dedede;
+    --descriptionText: rgba(201, 201, 201, 0.1);
+    --redText: #ef4444;
+    --textImportant: #FF9D00;
+
+    /* background */
+    --backgroundDark: #2e3035;
+
+    /* highlight */
+    --borderHighlightDark: #1e1f22;
+    --highlightDark: #2b2d31;
+    --yellowHighlight: #e88f00;
+    
+    /* other's */
+    --borderRedHighlight: #B00000;
+    --boxRedBackground: rgba(107, 0, 0, .4);
+    --toastRedBackground: #6B0000;
+
+    --borderImportant: #FF9900;
+    --boxImportant: rgba(126, 78, 0, .4);
+    --toastImportant: #7E4E00;
+
+    /* gitbook color's */
+    --gitbookGoldYellow: #c3b571;
+    --gitbookBlue: #3b82f6;
+    --gitbookGreen: #22c55e;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-family: "SUSE", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--backgroundDark);
+    color: var(--textColorWhite);
+}
+
+header {
+    /* width: 100vw; */
+
+    margin: 20px 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+header img {
+    width: 70vw;
+    max-width: 768px;
+
+    border-radius: 10px;
+}
+
+.title, .content {
+    width: 90vw;
+    max-width: 768px;
+
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+
+    background: var(--highlightDark);
+    border-radius: 10px;
+    border: 1px solid var(--borderHighlightDark);
+
+    padding: 15px;
+}
+
+
+.description, .content {
+    text-align: justify;
+}
+
+.content {
+    margin: 10px 0 20px 0;
+}
+
+.content h2 {
+    margin-top: 10px;
+}
+
+p {
+    margin: 20px 0;
+}
+
+hr {
+    border: 1px solid var(--descriptionText);
+    margin: 10px 0;
+}
+
+.button-container {
+    width: 90vw;
+    max-width: 768px;
+
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+
+    margin: 20px 0;
+    /* padding: 20px 0; */
+
+    display: flex;
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+.button-container a {
+    width: 50%;
+
+    text-decoration: none;
+    text-align: center;
+
+    color: var(--textColorWhite);
+
+    background: var(--highlightDark);
+    border: 1px solid var(--borderHighlightDark);
+    border-radius: 5px;
+
+    outline: 3px solid transparent;
+
+    padding: 15px 10px;
+
+    transition: all .2s;
+}
+
+li::marker {
+    font-weight: bold;
+}
+
+ol {
+    margin-left: 20px;
+    line-height: 25px;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+/* Estilizações de texto */
+
+.numberListHighlight,
+span.bold {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.listItem {
+    margin-left: 20px
+}
+
+.listItem::marker {
+    color: var(--descriptionText);
+}
+
+blockquote {
+    border-left: 2px solid var(--borderHighlightDark);
+}
+
+blockquote p {
+    margin-left: 10px;
+    font-style: italic;
+}
+
+/* Estilização de avisos */
+
+.toastObs {
+    color: var(--redText);
+    background: var(--toastRedBackground);
+    border: 1px solid var(--borderRedHighlight);
+    border-radius: 5px;
+
+    padding: 5px;
+}
+
+.toastImportant {
+    color: var(--textImportant);
+    background: var(--toastImportant);
+    border: 1px solid var(--borderImportant);
+    border-radius: 5px;
+
+    padding: 5px;
+}
+
+.boxObs {
+    color: white;
+    background: var(--boxRedBackground);
+    border: 1px solid var(--borderRedHighlight);
+    border-radius: 5px;
+
+    padding: 15px 10px 10px 10px;
+
+    margin-bottom: 15px;
+}
+
+.boxObs p {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.boxImportant {
+    color: white;
+    background: var(--boxImportant);
+    border: 1px solid var(--borderImportant);
+    border-radius: 5px;
+
+    padding: 15px 10px 10px 10px;
+}
+
+.boxImportant p {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+/* Estilizações extras */
+
+.emoji {
+    width: 50px;
+
+    background: var(--highlightDark);
+    border: 1px solid var(--textColorWhite);
+    border-radius: 5px;
+    
+    padding: 5px;
+}
+
+/* Quadro de abas */
+
+.tab-container {
+    background-color: var(--backgroundDark);
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+
+    border: 1px solid var(--borderHighlightDark);
+
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #3d3d3d;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #a0a0a0;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tab:hover {
+    color: white;
+}
+
+.tab.active {
+    background-color: #3d3d3d;
+    color: #ffffff;
+}
+
+.boardContent {
+    padding: 5px 20px;
+    font-size: 16px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .button-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button-container a {
+        width: initial;
+    }
+}
