@@ -301,7 +301,7 @@ blockquote p {
 
 .expand-section {
     margin-bottom: 8px;
-    border: 1px solid #374151;
+    border: 1px solid #424242;
     border-radius: 8px;
     overflow: hidden;
 }
@@ -328,8 +328,8 @@ blockquote p {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-    background-color: rgba(31, 41, 55, 0.5);
-    border-top: 1px solid #3d3d3d;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid #424242;
 }
 
 .expand-content.open {
