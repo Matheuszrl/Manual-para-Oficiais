@@ -23,14 +23,3 @@ document.querySelectorAll('.expand-button').forEach(button => {
         content.classList.toggle('open');
     });
 });
-
-document.addEventListener('DOMContentLoadedDropdown', () => {
-    const dropdownButton = document.querySelector('.dropdown-button');
-    const dropdownContent = document.querySelector('.dropdown-content');
-    const arrow = document.querySelector('.arrow');
-
-    dropdownButton.addEventListener('click', () => {
-        dropdownContent.classList.toggle('hidden');
-        arrow.textContent = dropdownContent.classList.contains('hidden') ? '▶' : '▼';
-    });
-});
