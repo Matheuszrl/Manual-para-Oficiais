@@ -24,7 +24,7 @@ document.querySelectorAll('.expand-button').forEach(button => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoadedDropdown', () => {
     const dropdownButton = document.querySelector('.dropdown-button');
     const dropdownContent = document.querySelector('.dropdown-content');
     const arrow = document.querySelector('.arrow');
