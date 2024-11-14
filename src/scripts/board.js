@@ -23,3 +23,31 @@ document.querySelectorAll('.expand-button').forEach(button => {
         content.classList.toggle('open');
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('modal');
+    const img = document.getElementById('zoomImage');
+    const modalImg = document.getElementById('modalImage');
+
+    // Abrir modal ao clicar na imagem
+    img.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // Fechar modal ao clicar em qualquer lugar
+    modal.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Prevenir que a imagem feche o modal quando clicar nela
+    modalImg.onclick = function(e) {
+        e.stopPropagation();
+    }
+
+    // Fechar modal com tecla ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === "block") {
+            modal.style.display = "none";
+        }
+    });
+});
