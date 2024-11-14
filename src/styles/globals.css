@@ -349,6 +349,22 @@ blockquote p {
     background-color: rgba(55, 65, 81, 0.3);
 }
 
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: auto;
+    max-height: 90vh;
+    background-color: #111827;
+    color: #D1D5DB;
+    padding: 1rem;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
 .nav-menu {
     display: flex;
     flex-direction: column;
