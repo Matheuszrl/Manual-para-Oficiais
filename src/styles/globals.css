@@ -396,3 +396,12 @@ blockquote p {
     transform: translate(-50%, -50%);
     object-fit: contain;
 }
+
+.code{
+    background: var(--borderHighlightDark);
+    padding: .125rem .5rem;
+    width: fit-content;
+    font-size: 14px;
+    border-radius: 5px;
+    tab-size: 4px;
+}
