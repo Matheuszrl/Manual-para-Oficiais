@@ -300,9 +300,12 @@ blockquote p {
 }
 
 .expand-section {
-    border-bottom: 1px solid #374151;
     margin-bottom: 8px;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    overflow: hidden;
 }
+
 .expand-button {
     width: 100%;
     text-align: left;
@@ -316,22 +319,32 @@ blockquote p {
     justify-content: space-between;
     align-items: center;
 }
+
 .expand-button:hover {
     background-color: rgba(55, 65, 81, 0.5);
 }
+
 .expand-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-    background-color: rgba(55, 65, 81, 0.3);
+    background-color: rgba(31, 41, 55, 0.5);
+    border-top: 1px solid #374151;
 }
+
 .expand-content.open {
     max-height: 500px;
     padding: 16px;
 }
+
 .chevron {
     transition: transform 0.3s ease-out;
 }
+
 .expand-button[aria-expanded="true"] .chevron {
     transform: rotate(180deg);
+}
+
+.expand-button[aria-expanded="true"] {
+    background-color: rgba(55, 65, 81, 0.3);
 }
