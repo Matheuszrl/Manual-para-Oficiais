@@ -366,7 +366,7 @@ blockquote p {
     transform: scale(1.01);
 }
 
-.description {
+.description-img {
     margin-top: 0.1rem;
     text-align: center;
     color: #666;
