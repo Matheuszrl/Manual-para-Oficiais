@@ -355,7 +355,7 @@ blockquote p {
 }
 
 .image-viewer {
-    background-color: white;
+    background-color: #2e3035;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -374,7 +374,7 @@ blockquote p {
 }
 
 .description {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     text-align: center;
     color: #666;
     font-size: 0.9rem;
