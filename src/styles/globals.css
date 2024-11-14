@@ -349,7 +349,7 @@ blockquote p {
     background-color: rgba(55, 65, 81, 0.3);
 }
 
-.layout {
+.layout-sidebar {
     display: flex;
     min-height: 100vh;
 }
