@@ -14,3 +14,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.querySelectorAll('.expand-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const expanded = button.getAttribute('aria-expanded') === 'true' || false;
+        button.setAttribute('aria-expanded', !expanded);
+        const content = document.getElementById(button.getAttribute('aria-controls'));
+        content.classList.toggle('open');
+    });
+});

@@ -298,3 +298,40 @@ blockquote p {
         width: initial;
     }
 }
+
+.expand-section {
+    border-bottom: 1px solid #374151;
+    margin-bottom: 8px;
+}
+.expand-button {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #E5E7EB;
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.expand-button:hover {
+    background-color: rgba(55, 65, 81, 0.5);
+}
+.expand-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    background-color: rgba(55, 65, 81, 0.3);
+}
+.expand-content.open {
+    max-height: 500px;
+    padding: 16px;
+}
+.chevron {
+    transition: transform 0.3s ease-out;
+}
+.expand-button[aria-expanded="true"] .chevron {
+    transform: rotate(180deg);
+}
