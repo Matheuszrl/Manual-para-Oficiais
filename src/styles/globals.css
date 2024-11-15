@@ -24,8 +24,6 @@
     --boxImportant: rgba(126, 78, 0, .4);
     --toastImportant: #7E4E00;
 
-    --tabChosen: #1e1f22;
-
     /* gitbook color's */
     --gitbookGoldYellow: #c3b571;
     --gitbookBlue: #3b82f6;
@@ -39,7 +37,6 @@
     box-sizing: border-box;
     font-family: sans-serif;
     font-family: "SUSE", sans-serif;
-    word-wrap: break-word;
 }
 
 html {
@@ -61,15 +58,11 @@ header {
 }
 
 header img {
-    width: 90vw;
+    width: 70vw;
     max-width: 768px;
+
     border-radius: 10px;
 }
-
-p img {
-    height: 20px;
-}
-
 
 .title, .content {
     width: 90vw;
@@ -83,44 +76,31 @@ p img {
     border-radius: 10px;
     border: 1px solid var(--borderHighlightDark);
 
-    padding: 25px;
+    padding: 15px;
 }
 
 
-.description {
-    margin: 0;
+.description, .content {
     text-align: justify;
 }
 
 .content {
-    text-align: justify;
     margin: 10px 0 20px 0;
 }
 
-h1 {
-    word-wrap: break-word;
-    margin-bottom:10px;
-    font-weight: 900;
-    
-}
 .content h2 {
-    /* margin-top: 10px; */
-    word-wrap: break-word;
-    text-align: justify;
-    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 p {
-    margin-bottom: 20px;
-    font-weight: 300;
-}
-
-hr {
-    border: 1px solid var(--borderHighlightDark);
     margin: 20px 0;
 }
 
-/* CAIXA DE OPÇÕES LATERAIS */
+hr {
+    border: 1px solid var(--descriptionText);
+    margin: 10px 0;
+}
+
 .button-container {
     width: 90vw;
     max-width: 768px;
@@ -158,7 +138,7 @@ hr {
 }
 
 li::marker {
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 ol {
@@ -166,16 +146,16 @@ ol {
     line-height: 25px;
 }
 
-h3, h4 {
-    margin-bottom: 10px;
+h3 {
+    margin-top: 20px;
 }
 
 /* Estilizações de texto */
 
 .numberListHighlight,
 span.bold {
-    font-weight: 700;
-    /* font-style: italic; */
+    font-weight: bold;
+    font-style: italic;
 }
 
 .listItem {
@@ -188,38 +168,11 @@ span.bold {
 
 blockquote {
     border-left: 2px solid var(--borderHighlightDark);
-    padding-left: 20px;
-    margin-bottom: 20px;
 }
 
-.imageInLineBox{
-    display: flex;
-    justify-content: space-between;
-}
-.imageInLine{
-    max-height: 40px;
-    margin-right: 10px;
-    vertical-align: middle;
-    display: inline-flex;
-    justify-content: center;
-}
-
-.imageInLine2{
-    display: inline-flex;
-    vertical-align: middle;
-}
-.imageInLine2 p{
-    margin:0px;
-    text-align: justify;
-}
-
-.code{
-    background: var(--borderHighlightDark);
-    padding: .125rem .5rem;
-    width: fit-content;
-    font-size: 14px;
-    border-radius: 5px;
-    tab-size: 4px;
+blockquote p {
+    margin-left: 10px;
+    font-style: italic;
 }
 
 /* Estilização de avisos */
@@ -248,8 +201,9 @@ blockquote {
     border: 1px solid var(--borderRedHighlight);
     border-radius: 5px;
 
-    padding: 20px 15px 15px 15px;
-    margin-bottom: 20px;
+    padding: 15px 10px 10px 10px;
+
+    margin-bottom: 15px;
 }
 
 .boxObs p {
@@ -263,8 +217,7 @@ blockquote {
     border: 1px solid var(--borderImportant);
     border-radius: 5px;
 
-    padding: 20px 15px 15px 15px;
-    margin-bottom: 20px;
+    padding: 15px 10px 10px 10px;
 }
 
 .boxImportant p {
@@ -291,14 +244,16 @@ blockquote {
     border-radius: 5px;
     overflow: hidden;
     max-width: 800px;
-    margin: 0 0 20px 0;
+    margin: 0 auto;
 
     border: 1px solid var(--borderHighlightDark);
+
+    margin-bottom: 20px;
 }
 
 .tabs {
     display: flex;
-    border-bottom: 1px solid var(--tabChosen);;
+    border-bottom: 1px solid #3d3d3d;
 }
 
 .tab {
@@ -316,13 +271,12 @@ blockquote {
 }
 
 .tab.active {
-    background-color: var(--tabChosen);;
+    background-color: #3d3d3d;
     color: #ffffff;
 }
 
-
 .boardContent {
-    padding: 15px;
+    padding: 5px 20px;
     font-size: 16px;
 }
 
@@ -332,10 +286,6 @@ blockquote {
 
 .tab-content.active {
     display: block;
-}
-
-.tab-content.active p{
-    margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -446,6 +396,15 @@ blockquote {
     transform: translate(-50%, -50%);
     object-fit: contain;
 }*/
+
+.code{
+    background: var(--borderHighlightDark);
+    padding: .125rem .5rem;
+    width: fit-content;
+    font-size: 14px;
+    border-radius: 5px;
+    tab-size: 4px;
+} 
 
 .container-img {
     max-width: 64rem;

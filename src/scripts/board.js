@@ -5,22 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             const tabId = tab.getAttribute('data-tab');
-            const tabGroup = tab.getAttribute('tab-group');
-            
-            tabs.forEach(
-                t => {
-                    if (t.getAttribute('tab-group') == tabGroup){
-                        t.classList.remove('active')
-                    }
-                }                
-            );
-            contents.forEach(
-                c => {
-                    if (c.getAttribute('tab-group') == tabGroup){
-                        c.classList.remove('active')
-                    }
-                }             
-            );
+
+            tabs.forEach(t => t.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+
             tab.classList.add('active');
             document.getElementById(tabId).classList.add('active');
         });
