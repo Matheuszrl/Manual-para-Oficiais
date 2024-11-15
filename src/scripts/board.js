@@ -24,30 +24,42 @@ document.querySelectorAll('.expand-button').forEach(button => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('modal');
-    const img = document.getElementById('zoomImage');
-    const modalImg = document.getElementById('modalImage');
+    const modalImg = document.getElementById('modal-image');
+    const modalText = document.getElementById('modal-text');
+    const closeButton = document.querySelector('.close-button');
+    const thumbnails = document.querySelectorAll('.thumbnail');
 
-    // Abrir modal ao clicar na imagem
-    img.onclick = function() {
-        modal.style.display = "block";
-    }
+    // Open modal
+    thumbnails.forEach(img => {
+        img.addEventListener('click', () => {
+            modalImg.src = img.src;
+            modalImg.alt = img.alt;
+            modalText.textContent = img.dataset.description;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
 
-    // Fechar modal ao clicar em qualquer lugar
-    modal.onclick = function() {
-        modal.style.display = "none";
-    }
+    // Close modal functions
+    const closeModal = () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    };
 
-    // Prevenir que a imagem feche o modal quando clicar nela
-    modalImg.onclick = function(e) {
-        e.stopPropagation();
-    }
+    closeButton.addEventListener('click', closeModal);
+    
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
 
-    // Fechar modal com tecla ESC
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modal.style.display === "block") {
-            modal.style.display = "none";
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
         }
     });
 });
