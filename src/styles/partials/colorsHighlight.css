@@ -1,5 +1,5 @@
 /* ACOMPANHAMENTO */
-#pagAC .title h2, 
+#pagAC .title h1, 
 #pagAC .content h2, 
 #pagAC h3,
 #pagAC .highlight-AC {
@@ -12,7 +12,7 @@
 }
 
 /* ABORDAGEM */
-#pagAB .title h2, 
+#pagAB .title h1, 
 #pagAB .content h2, 
 #pagAB h3,
 #pagAB .highlight-AB {
@@ -25,7 +25,7 @@
 }
 
 /* COMUNICAÇÃO OPERACIONAL */
-#pagCO .title h2, 
+#pagCO .title h1, 
 #pagCO .content h2, 
 #pagCO h3,
 #pagCO .highlight-CO {
