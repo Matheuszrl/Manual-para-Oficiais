@@ -297,7 +297,7 @@ blockquote p {
     .button-container a {
         width: initial;
     }
-    
+
     .image-container {
         grid-template-columns: 1fr;
     }
@@ -365,113 +365,6 @@ blockquote p {
     border-radius: 5px;
     tab-size: 4px;
 } 
-
-/*.container-img {
-    max-width: 64rem;
-    margin: 0 auto;
-}
-
-.image-viewer {
-    max-width: 32rem;
-    margin: 1rem auto;
-}
-
-.image-container {
-    border-radius: 0.5rem;
-    overflow: hidden;
-    border: 1px solid rgb(229, 231, 235);
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    background-color: white;
-    cursor: zoom-in;
-}
-
-.thumbnail {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: opacity 0.2s ease;
-}
-
-.thumbnail:hover {
-    opacity: 0.9;
-}
-
-.description-img {
-    padding: 0.75rem;
-    background-color: rgb(249, 250, 251);
-    border-top: 1px solid rgb(229, 231, 235);
-}
-
-.description-img p {
-    font-size: 0.875rem;
-    color: rgb(75, 85, 99);
-}*/
-
-/* Modal */
-/*.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-}
-
-.modal.active {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.modal img {
-    max-width: 90%;
-    max-height: 80vh;
-    border-radius: 0.5rem;
-}
-
-.close-button {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.close-button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.modal-description {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 1rem;
-    border-radius: 0.5rem;
-    max-width: 90%;
-}
-
-.modal-description p {
-    color: rgb(31, 41, 55);
-    text-align: center;
-    margin: 0;
-}*/
 
 .image-container {
     display: grid;
