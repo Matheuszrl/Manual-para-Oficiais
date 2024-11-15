@@ -15,6 +15,7 @@
 #pagAB .title h1, 
 #pagAB .content h2, 
 #pagAB h3,
+#pagAB h4,
 #pagAB .highlight-AB {
     color: var(--gitbookBlue);
 }
