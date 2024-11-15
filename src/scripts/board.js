@@ -5,10 +5,22 @@ document.addEventListener('DOMContentLoaded', function() {
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             const tabId = tab.getAttribute('data-tab');
-
-            tabs.forEach(t => t.classList.remove('active'));
-            contents.forEach(c => c.classList.remove('active'));
-
+            const tabGroup = tab.getAttribute('tab-group');
+            
+            tabs.forEach(
+                t => {
+                    if (t.getAttribute('tab-group') == tabGroup){
+                        t.classList.remove('active')
+                    }
+                }                
+            );
+            contents.forEach(
+                c => {
+                    if (c.getAttribute('tab-group') == tabGroup){
+                        c.classList.remove('active')
+                    }
+                }             
+            );
             tab.classList.add('active');
             document.getElementById(tabId).classList.add('active');
         });
@@ -23,46 +35,6 @@ document.querySelectorAll('.expand-button').forEach(button => {
         content.classList.toggle('open');
     });
 });
-
-/* document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.getElementById('modal');
-    const modalImg = document.getElementById('modal-image');
-    const modalText = document.getElementById('modal-text');
-    const closeButton = document.querySelector('.close-button');
-    const thumbnails = document.querySelectorAll('.thumbnail');
-
-    // Open modal
-    thumbnails.forEach(img => {
-        img.addEventListener('click', () => {
-            modalImg.src = img.src;
-            modalImg.alt = img.alt;
-            modalText.textContent = img.dataset.description;
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-    });
-
-    // Close modal functions
-    const closeModal = () => {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-    };
-
-    closeButton.addEventListener('click', closeModal);
-    
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
-
-    // Close on escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            closeModal();
-        }
-    });
-}); */
 
 document.addEventListener('DOMContentLoaded', function() {
     // Seleciona todos os elementos necessários
