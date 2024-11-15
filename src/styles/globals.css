@@ -438,8 +438,6 @@ blockquote p {
 
 .description-img {
     padding: 0.75rem;
-    align-items: center;
-    justify-content: center;
     /*background-color: rgb(249, 250, 251);
     border-top: 1px solid rgb(229, 231, 235);*/
 }
