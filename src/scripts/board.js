@@ -24,7 +24,7 @@ document.querySelectorAll('.expand-button').forEach(button => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+/* document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('modal');
     const modalImg = document.getElementById('modal-image');
     const modalText = document.getElementById('modal-text');
@@ -60,6 +60,41 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.classList.contains('active')) {
             closeModal();
+        }
+    });
+}); */
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleciona todos os elementos necessários
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('zoomedImage');
+    const closeButton = document.querySelector('.close-button');
+    const zoomableImages = document.querySelectorAll('.zoomable-image img');
+
+    // Adiciona evento de clique para cada imagem
+    zoomableImages.forEach(img => {
+        img.addEventListener('click', function() {
+            modal.style.display = 'block';
+            modalImg.src = this.src;
+        });
+    });
+
+    // Fecha o modal ao clicar no X
+    closeButton.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    // Fecha o modal ao clicar fora da imagem
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    // Fecha o modal com a tecla ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            modal.style.display = 'none';
         }
     });
 });
