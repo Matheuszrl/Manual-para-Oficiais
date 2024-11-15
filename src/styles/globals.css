@@ -436,13 +436,13 @@ blockquote p {
     opacity: 0.9;
 }
 
-.description {
+.description-img {
     padding: 0.75rem;
     background-color: rgb(249, 250, 251);
     border-top: 1px solid rgb(229, 231, 235);
 }
 
-.description p {
+.description-img p {
     font-size: 0.875rem;
     color: rgb(75, 85, 99);
 }
