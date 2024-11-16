@@ -70,3 +70,59 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Encontra todos os itens do menu que têm submenu
+    const menuItems = document.querySelectorAll('.menu-item');
+
+    menuItems.forEach(item => {
+        const header = item.querySelector('.menu-header');
+        const submenu = item.querySelector('.submenu');
+
+        // Só adiciona o evento de clique se houver um submenu e não for um link
+        if (submenu && !header.hasAttribute('href')) {
+            header.addEventListener('click', (e) => {
+                e.preventDefault();
+                // Toggle da classe expanded
+                item.classList.toggle('expanded');
+
+                // Fecha outros submenus abertos no mesmo nível
+                const siblings = [...item.parentElement.children].filter(child => child !== item);
+                siblings.forEach(sibling => {
+                    sibling.classList.remove('expanded');
+                });
+            });
+        }
+
+        // Adiciona evento de clique para selecionar item
+        header.addEventListener('click', (e) => {
+            // Se for um link, permite a navegação padrão
+            if (header.hasAttribute('href')) {
+                return;
+            }
+
+            e.preventDefault();
+            
+            // Remove a classe active de todos os itens
+            menuItems.forEach(menuItem => {
+                menuItem.classList.remove('active');
+            });
+            
+            // Adiciona a classe active ao item clicado
+            item.classList.add('active');
+            
+            // Previne a propagação do evento para não interferir com a expansão do submenu
+            e.stopPropagation();
+        });
+    });
+
+    // Expande automaticamente o menu que contém o item ativo
+    const activeItem = document.querySelector('.menu-item.active');
+    if (activeItem) {
+        let parent = activeItem.parentElement;
+        while (parent.classList.contains('submenu')) {
+            parent.parentElement.classList.add('expanded');
+            parent = parent.parentElement.parentElement;
+        }
+    }
+});
