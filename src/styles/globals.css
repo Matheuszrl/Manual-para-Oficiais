@@ -72,10 +72,10 @@ p img {
 
 
 .title, .content {
-    width: 90vw;
+    width: calc(100vw - 95vw);
     max-width: 768px;
 
-    position: relative;
+    position: fixed;
     left: 50%;
     transform: translate(-50%);
 
